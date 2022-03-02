@@ -15,7 +15,6 @@ wss.on('connection', (ws, req) => {
     ws.send(JSON.stringify({
       count: origins.get(origin),
     }));
-    console.log(origins);
   }, 1000);
 
   ws.on('message', () => {
